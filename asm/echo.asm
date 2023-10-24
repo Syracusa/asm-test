@@ -11,7 +11,7 @@ section .text
     global _start
 
 _start:
-    ; User prompt
+    ; User prompt 'Please enter a text(~4 charactor): '
     mov eax, 4
     mov ebx, 1
     mov ecx, userMsg
@@ -22,17 +22,17 @@ _start:
     mov eax, 3
     mov ebx, 2
     mov ecx, userInput
-    mov edx, 5                  ; 5 bytes (numeric, 1 for sign) of that information
+    mov edx, 5                  ; Read 5 bytes
     int 80h
 
-    ; Output the message 'The entered number is: '
+    ; Output the message 'You have entered: '
     mov eax, 4
     mov ebx, 1
     mov ecx, dispMsg
     mov edx, lenDispMsg
     int 80h
 
-    ; Output the number entered
+    ; Output the user input
     mov eax, 4
     mov ebx, 1
     mov ecx, userInput
