@@ -1,0 +1,6 @@
+*
+!asm
+!*.asm
+!.gitignore
+!README.md
+!build.sh
